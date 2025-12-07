@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 import os
 
 # Create a SQLite database file named app.db
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///:memory:")
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:////tmp/app.db")
 engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 
 
